@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         
     
-        
+        //invoca todas las entidades
         Scanner scanner = new Scanner (System.in);
         ArrayList<String> listalibro = new ArrayList<>();
         ArrayList<String> potrousuario = new ArrayList<>();
@@ -28,7 +28,7 @@ public class Main {
         Libro libresito = new Libro ();
         Estadodecuenta comprasyventas = new Estadodecuenta ();
         String repetir;
-        
+        //ingresa datos de la clase estudiante los 3 print
         System.out.println("Ingrese su nombre");
         String estudiant = scanner.nextLine();
         
@@ -38,7 +38,7 @@ public class Main {
         System.out.println("ingrese el semestre en el que va");
         int semestre = Integer.parseInt(scanner.nextLine());
         
-            //estudiante
+        //estudiante invoca los objetos de estudiante para actualizar datos
         usuario.setEstudiant(estudiant);
         usuario.setId(id);
         usuario.setSemestre(semestre);
@@ -47,6 +47,7 @@ public class Main {
         int numero_de_libro=0;
         int deuda=0;
         do {
+            //da opciones al usuario para que escoja segun la escoja tomara un camino
              System.out.print("que quieres hacer?"+
                     "\n 1. agregar libro por 100 pesos"+
                     "\n 2. ver la lista de libros"+
@@ -80,7 +81,7 @@ public class Main {
             if(hacer.equals("3")) {
                 System.out.println("tiene una deuda de: "+deuda+" desea abonar solo puede abonar en numeros enteros, si desea abonar ponga (1)");
                 String talvez = scanner.nextLine();
-                
+                //para que el usuario pueda abonar
                 if(talvez.equals("1")) {
                     System.out.println("cuando desea abonar?");
                     int abonar = Integer.parseInt(scanner.nextLine());
@@ -95,7 +96,7 @@ public class Main {
                 break;
             }
                     
-       
+            //importante para regresar al meno y seguir repitiendo 
             System.out.println("si quiere volver al menu precione  (s) o (S)"+
                    "\n para terminar el programa ingrese calcuer cosa que no sea (S) o (s)");
             repetir = scanner.nextLine().toLowerCase();
